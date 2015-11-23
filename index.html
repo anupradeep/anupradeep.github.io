@@ -293,11 +293,17 @@ http://scal.io -- check us out.
         
         var appendText = "";
         if (daysUntil(2015, 11, 5) < 0)
+        {
             appendText = " days went by since ";
+            daysToSince = daysUntil(2015, 11, 5) * -1;
+        }
         else
+        {
             appendText = " days to go to ";
+            daysToSince = daysUntil(2015, 11, 5);
+        }
         
-        x.innerText = string.concat(daysUntil(2015, 11, 5), appendText); // 19 days!!
+        x.innerText = daysToSince + appendText; // 19 days!!
         
         </script>
         <script id="dsq-count-scr" src="//anupradeep.disqus.com/count.js" async></script>
