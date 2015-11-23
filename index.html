@@ -62,14 +62,12 @@ http://scal.io -- check us out.
                             <li><a href="#reception">RECEPTION</a></li>
                             <li><a href="#disqus_thread">BUZZ US</a></li>
                         </ul>
-
                     </nav>
                 </div>
             </div>
 
             <div class="main-container">
                 <div class="main wrapper clearfix">
-
                     <header>
                         <div id="introtext">
                             <span class="head-sarah">Anu</span>
@@ -78,6 +76,7 @@ http://scal.io -- check us out.
                                 Pradeep
                             </span>
                             <div class="date">DECEMBER 5<sup>th</sup>, 2015</div>
+                            <span id="daysUntil"></span> the D-Day!
                         </div>
                     </header>
 
@@ -283,6 +282,16 @@ http://scal.io -- check us out.
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
+        
+        function daysUntil(year, month, day) {
+            var now = new Date(),
+            dateEnd = new Date(year, month - 1, day), // months are zero-based
+            days = (dateEnd - now) / 1000/60/60/24;   // convert milliseconds to days
+            return Math.round(days);
+        }
+        var x = document.getElementById("daysUntil");
+        x.innerText = daysUntil(2015, 12, 5); // 19 days!!
+        
         </script>
         <script id="dsq-count-scr" src="//anupradeep.disqus.com/count.js" async></script>
     </body>
