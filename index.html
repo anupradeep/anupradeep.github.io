@@ -290,13 +290,14 @@ http://scal.io -- check us out.
             return Math.round(days);
         }
         var x = document.getElementById("daysUntil");
+        
         var appendText = "";
         if (daysUntil(2015, 11, 5) < 0)
             appendText = " days went by since ";
         else
-            appendText = " days to go till ";
+            appendText = " days to go to ";
         
-        x.innerText = daysUntil(2015, 11, 5) & appendText; // 19 days!!
+        x.innerText = string.concat(daysUntil(2015, 11, 5), appendText); // 19 days!!
         
         </script>
         <script id="dsq-count-scr" src="//anupradeep.disqus.com/count.js" async></script>
