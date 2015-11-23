@@ -60,7 +60,7 @@ http://scal.io -- check us out.
                             <li><a href="#sangeet">SANGEET</a></li>
                             <li><a href="#wedding">WEDDING</a></li>
                             <li><a href="#reception">RECEPTION</a></li>
-                            <li><a href="#disqus_thread">BUZZ US</a></li>
+                            <li>BUZZ US (<a href="#disqus_thread">BUZZ US</a>)</li>
                         </ul>
                     </nav>
                 </div>
@@ -292,15 +292,15 @@ http://scal.io -- check us out.
         var x = document.getElementById("daysUntil");
         
         var appendText = "";
-        if (daysUntil(2015, 11, 5) < 0)
+        if (daysUntil(2015, 12, 5) < 0)
         {
             appendText = " days went by since ";
-            daysToSince = daysUntil(2015, 11, 5) * -1;
+            daysToSince = daysUntil(2015, 12, 5) * -1;
         }
         else
         {
             appendText = " days to go to ";
-            daysToSince = daysUntil(2015, 11, 5);
+            daysToSince = daysUntil(2015, 12, 5);
         }
         
         x.innerText = daysToSince + appendText; // 19 days!!
